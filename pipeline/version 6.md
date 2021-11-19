@@ -5,7 +5,7 @@
 ## Simple CSS changes
 
 To add any CSS code in this list follow these steps:
-[Where to add css](https://groupthought-themes.gitbook.io/tutorials/)
+[Where to add CSS](https://groupthought-themes.gitbook.io/tutorials/)
 
 1. [Solid Color for Add to cart button](#1)
 2. [Hide Add to cart button price](#2)
@@ -15,7 +15,7 @@ To add any CSS code in this list follow these steps:
 6. [Overriding the theme font](#6)
 7. [Change color of size chart link](#7)
 8. [Sticky currency and language selectors](#8)
-9. [Use initial/lower case for all text](#9)
+9. [Use initial case for all text](#9)
 
 <!--
 ## Advanced Changes
@@ -232,7 +232,7 @@ Use this to apply the change only to desktop
 ![image](https://user-images.githubusercontent.com/1010232/142250897-0b113da9-1cbe-419f-a27f-5a728aeab0c9.png)
 
 
-### 9. Use initial/lower case for text <a name="9"></a>
+### 9. Use initial case for all text <a name="9"></a>
 
 This will force text to use normal letter case.
 
