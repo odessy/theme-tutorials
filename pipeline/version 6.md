@@ -18,11 +18,11 @@ To add any CSS code in this list follow these steps:
 9. [Use initial case for all text](#9)
 10. [Change background-color and roundness of variant radio labels](#10)
 
-<!--
+
 ## Advanced Changes
 #### May require both CSS and Javascript changes
 1. [Show cart drawer when product added to cart - for pipeline 6.1 and above](#21)
--->
+
 
 ### 1. Solid Color for Add to cart button <a name="1"></a>
 
@@ -296,11 +296,13 @@ Add this to make the labels round
 
 
 
-<!--
-### Show cart drawer when product added to cart <a name="21"></a>
+
+### 1. Show cart drawer when product added to cart <a name="21"></a>
+
+Add this to the end of your theme.js javascript file
 
 ```js
-/* Javascript - Hide the product add popdown */
+/* Javascript - Show cart drawer when product added to cart */
 document.addEventListener('theme:cart:popdown', (e) => {
   document.addEventListener('theme:cart:change', (e) => {
     document.querySelector('[data-drawer="drawer-cart"]').dispatchEvent(
@@ -320,4 +322,4 @@ document.addEventListener('theme:cart:popdown', (e) => {
 }
 /* end */
 ```
--->
+
