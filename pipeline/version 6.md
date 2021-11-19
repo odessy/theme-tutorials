@@ -16,6 +16,7 @@ To add any CSS code in this list follow these steps:
 7. [Change color of size chart link](#7)
 8. [Sticky currency and language selectors](#8)
 9. [Use initial case for all text](#9)
+10. [Change background-color and roundness of variant radio labels](#10)
 
 <!--
 ## Advanced Changes
@@ -250,6 +251,48 @@ This will force text to use normal letter case.
 }
 /* end */
 ```
+
+
+### 10. Change background-color and roundness of variant radio labels <a name="10"></a>
+
+Update the ```---background-color``` and ```---color``` properties to any valid HEX code. 
+
+```css
+/* CSS - Change background-color and roundness of variant radio labels */
+.radio__fieldset .radio__button{
+  ---background-color: #f9f9f9;
+  ---color: #1b1546;
+}
+.radio__fieldset .radio__button input~label {
+    background-color: var(---background-color);
+    color: var(---color);
+}
+/* When the radio button is checked */
+.radio__fieldset .radio__button input:checked~label {
+    background-color: var(---color);
+    color: var(---background-color);
+    border-color: var(---background-color);
+}
+/* When the radio button is hover */
+.radio__fieldset .radio__button label:active, .radio__fieldset .radio__button label:focus, .radio__fieldset .radio__button label:hover {
+    background-color: var(---background-color);
+    color: var(---color);
+    opacity: 0.7;
+}
+```
+
+Add this to make the labels round
+
+```css
+/* Make button round */
+.radio__fieldset .radio__button label{
+    border-radius: 25px;
+}
+/* end */
+```
+
+#### Example when this is used
+![image](https://user-images.githubusercontent.com/1010232/142664998-c79541a6-8873-4c2d-a396-18b06f726195.png)
 
 
 
