@@ -15,6 +15,7 @@ To add any CSS code in this list follow these steps:
 6. [Overriding the theme font](#6)
 7. [Change color of size chart link](#7)
 8. [Sticky currency and language selectors](#8)
+9. [Use initial/lower case for all text](#9)
 
 <!--
 ## Advanced Changes
@@ -229,6 +230,27 @@ Use this to apply the change only to desktop
 
 #### Example when this is used
 ![image](https://user-images.githubusercontent.com/1010232/142250897-0b113da9-1cbe-419f-a27f-5a728aeab0c9.png)
+
+
+### 9. Use initial/lower case for text <a name="9"></a>
+
+This will force text to use normal letter case.
+
+```css
+/* CSS - Use initial text transform for all text */
+.footer-quicklinks, .footer-secondary, .breadcrumb, .navtext, .uppercase, .home--uppercase, .home__subtitle,
+.grid__title, .icon__column__heading, .product__grid__title, .standard__kicker, .product__info__link--inline, 
+.radio__legend__label, .shopify-payment-button .shopify-payment-button__button--unbranded,
+.accordion__title, .collection__filters__toggle, .popout--navbar .popout__toggle,
+.product__badge, .subcollection__title{
+  text-transform: initial !important;
+}
+:root{
+    ---font-heading-caps: initial
+}
+/* end */
+```
+
 
 
 <!--
