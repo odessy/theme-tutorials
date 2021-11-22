@@ -57,6 +57,25 @@ This allows the add to cart button to use the primary accent color
 ![image](https://user-images.githubusercontent.com/1010232/142236205-beccfc66-05d4-4f86-8c41-fcdfdfda6cc1.png)
 
 
+To use custom colors instead of the primary theme color also add this CSS code. Use any valid hex color for the properties
+ - ```---color-primary```  - the background color
+ - ```---color-primary-hover```  - the hover background color
+ - ```---color-primary-opposite``` - the text color
+
+```css
+/* CSS - custom colors Add to Cart button */
+.product__submit__buttons .btn--add-to-cart {
+  ---color-primary: #444444;
+  ---color-primary-hover: #111111;
+  ---color-primary-opposite: #ffffff;
+}
+/* - end - */
+```
+
+![image](https://user-images.githubusercontent.com/1010232/142880271-8f1d2ae4-e3ba-4ad8-a33d-da3ab2068454.png)
+
+
+
 ### 2. Hide Add to cart button price <a name="2"></a>
 
 ```css
