@@ -369,6 +369,15 @@ Add this to make the labels round
 
 ### 1. Show cart drawer when product added to cart <a name="21"></a>
 
+```css
+/* CSS - Hide the product add popdown */
+.product-add-popdown{
+  display: none !important;
+}
+/* end */
+```
+
+
 Add this to the end of your theme.js javascript file
 
 ```js
@@ -385,11 +394,4 @@ document.addEventListener('theme:cart:popdown', (e) => {
 /* end */
 ```
 
-```css
-/* CSS - Hide the product add popdown */
-.product-add-popdown{
-  display: none !important;
-}
-/* end */
-```
 
