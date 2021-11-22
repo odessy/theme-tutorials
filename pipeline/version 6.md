@@ -157,6 +157,8 @@ Example of that code. This is used for the URL property for font-face import cod
 
 #### b. Overriding the theme font
 
+Add this CSS below the @font-face code.
+
 The variables with "--font-stack-" can be updated for the body, heading, and accent. For more specific elements different CSS code would be needed.
 
 ```css
@@ -166,6 +168,9 @@ The variables with "--font-stack-" can be updated for the body, heading, and acc
   ---font-stack-accent:  'Gotham', sans-serif;
 }
 ```
+
+![image](https://user-images.githubusercontent.com/1010232/142937317-00396a84-493e-4947-b8ae-3cfb64cae866.png)
+
 
 ### 7. Change color of size chart link <a name="7"></a>
 
