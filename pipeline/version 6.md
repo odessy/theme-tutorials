@@ -394,4 +394,5 @@ document.addEventListener('theme:cart:popdown', (e) => {
 /* end */
 ```
 
-
+#### Example when this is used
+https://www.loom.com/embed/9f05e0b5a58f4d45a5bdeacfece4ac00
