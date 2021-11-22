@@ -17,6 +17,7 @@ To add any CSS code in this list follow these steps:
 8. [Sticky currency and language selectors](#8)
 9. [Use initial case for all text](#9)
 10. [Change background-color and roundness of variant radio labels](#10)
+11. [Show dots for mobile product page thumbnails](#11)
 
 
 ## Advanced Changes
@@ -313,6 +314,56 @@ Add this to make the labels round
 #### Example when this is used
 ![image](https://user-images.githubusercontent.com/1010232/142664998-c79541a6-8873-4c2d-a396-18b06f726195.png)
 
+
+### 11. Show dots for mobile product page thumbnails <a name="11"></a>
+
+```css
+/* CSS - Show dots for mobile product page thumbnails */
+@media only screen and (max-width: 480px){
+.media__thumb__wrapper .flickity-viewport {
+  height: auto !important;
+}
+.media__thumb__wrapper .flickity-viewport,
+.media__thumb__wrapper .flickity-slider,
+.media__thumb__wrapper .media__thumb {
+  position: relative !important;
+  transform: none !important;
+  left: 0 !important;
+}
+.media__thumb__wrapper  .media__thumb:before {
+  content: "";
+  background-color: #dcdcdc;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+}
+.media__thumb__wrapper  .media__thumb.is-selected:before{
+ background-color: #5c5c5c;
+}
+.media__thumb__wrapper .media__thumb.is-selected:after,
+.media__thumb__wrapper .media__thumb img{
+  display: none;
+}
+.media__thumb__wrapper .media__thumb{
+  width: 8px;
+  height: 8px;
+}
+.media__thumb__wrapper .media__thumb{
+  text-align: center;
+}
+.media__thumb__wrapper.flickity-enabled .flickity-slider{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+}
+/* end */
+```
+
+#### Example when this is used
+
+![image](https://user-images.githubusercontent.com/1010232/142922046-352e2699-c5a2-4207-9ced-8abd71252be2.png)
 
 
 
