@@ -157,7 +157,7 @@ Example of that code. This is used for the URL property for font-face import cod
 
 #### b. Overriding the theme font
 
-Add this CSS below the @font-face code.
+Add this CSS below the @font-face code. The 'Gotham' is only an example in this code sample. Modify the code to use your custom ```font-family```.
 
 The variables with "--font-stack-" can be updated for the body, heading, and accent. For more specific elements different CSS code would be needed.
 
