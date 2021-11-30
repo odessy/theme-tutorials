@@ -18,6 +18,7 @@ To add any CSS code in this list follow these steps:
 9. [Use initial case for all text](#9)
 10. [Change background-color and roundness of variant radio labels](#10)
 11. [Show dots for mobile product page thumbnails](#11)
+12. [Borderless product page image on mobile](#12)
 
 
 ## Advanced Changes
@@ -369,6 +370,43 @@ Add this to make the labels round
 #### Example when this is used
 
 ![image](https://user-images.githubusercontent.com/1010232/142922046-352e2699-c5a2-4207-9ced-8abd71252be2.png)
+
+
+
+### 12. Borderless product page image on mobile <a name="12"></a>
+
+```css
+/* CSS - Borderless product page image on mobile */
+@media only screen and (max-width: 480px) {  
+  .product__media > div{
+    width: 100% !important;
+  } 
+  .product-page{
+    padding-top: 0;
+  }
+  .product-page > .wrapper {
+      padding: 0;
+  }
+  .grid.product-single{
+    margin-left: 0;
+  }  
+  .grid.product-single > .grid__item{
+    padding-left: 0;
+  }
+  .breadcrumb,
+  .media__thumb__wrapper {
+     margin: 0 var(--gutter) 0 var(--gutter);
+  }
+  .grid.product-single > .grid__item:not(.product__media__wrapper){
+     padding: 0 var(--gutter);
+  }
+}
+/* end */
+```
+
+#### Example when this is used
+
+![image](https://user-images.githubusercontent.com/1010232/144066487-ddc1605f-f12b-4065-8bec-30605b2ddade.png)
 
 
 
