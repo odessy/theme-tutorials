@@ -444,7 +444,7 @@ https://www.loom.com/embed/9f05e0b5a58f4d45a5bdeacfece4ac00
 ### 2. Add SKU to product section <a name="22"></a>
 
 
-Add this code to the Liquid section block on the product page
+Add the code below to the Liquid section block on the product page
 
 ![image](https://user-images.githubusercontent.com/1010232/144634266-5e250919-68f8-4987-8f49-b69557e09f4b.png)
 
