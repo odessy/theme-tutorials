@@ -443,6 +443,12 @@ https://www.loom.com/embed/9f05e0b5a58f4d45a5bdeacfece4ac00
 
 ### 2. Add SKU to product section <a name="22"></a>
 
+
+Add this code to the Liquid section block on the product page
+
+![image](https://user-images.githubusercontent.com/1010232/144634266-5e250919-68f8-4987-8f49-b69557e09f4b.png)
+
+
 ```liquid
 <!-- Liquid - Add product SKU -->                       
 {% assign current_variant = product.selected_or_first_available_variant %}
@@ -475,10 +481,6 @@ https://www.loom.com/embed/9f05e0b5a58f4d45a5bdeacfece4ac00
 </script>
 <!-- end SKU --> 
 ```
-
-Add this code to the Liquid section block on the product page
-
-![image](https://user-images.githubusercontent.com/1010232/144634266-5e250919-68f8-4987-8f49-b69557e09f4b.png)
 
 
 #### Example when this is used
