@@ -4,7 +4,7 @@
 
 ## Simple CSS changes
 
-To add any CSS code in this list follow these steps:
+To add any <b>CSS</b> code in this list follow these steps:
 [Where to add CSS](https://groupthought-themes.gitbook.io/tutorials/)
 
 1. [Solid Color for Add to cart button](#1)
@@ -22,9 +22,9 @@ To add any CSS code in this list follow these steps:
 
 
 ## Advanced Changes
-#### May require both CSS and Javascript changes
+May require <b>Liquid</b>, <b>CSS</b> and <b>Javascript</b> changes
 1. [Show cart drawer when product added to cart - for pipeline 6.1 and above](#21)
-
+2. [Add SKU to product section with the Liquid block](#22)
 
 ### 1. Solid Color for Add to cart button <a name="1"></a>
 
@@ -408,7 +408,7 @@ Add this to make the labels round
 
 ![image](https://user-images.githubusercontent.com/1010232/144066487-ddc1605f-f12b-4065-8bec-30605b2ddade.png)
 
-
+## Advanced Changes
 
 ### 1. Show cart drawer when product added to cart <a name="21"></a>
 
@@ -439,3 +439,48 @@ document.addEventListener('theme:cart:popdown', (e) => {
 
 #### Example when this is used
 https://www.loom.com/embed/9f05e0b5a58f4d45a5bdeacfece4ac00
+
+
+### 2. Add SKU to product section <a name="22"></a>
+
+```liquid
+<!-- Liquid - Add product SKU -->                       
+{% assign current_variant = product.selected_or_first_available_variant %}
+<p class="sku-wrapper radio__legend"><span class="radio__legend__label" {% if current_variant.sku == "" %}style="display:none;" {% endif %}>SKU</span><span class="variant-sku">{{ current_variant.sku }}</span></p>
+
+<script>
+  document.addEventListener('theme:variant:change', function(event) {
+    var variant = event.detail.variant;
+    var container = event.target;
+    const skuWrapper = container.querySelectorAll(".sku-wrapper");
+	
+    if (skuWrapper.length) {
+      skuWrapper.forEach((element) => {
+        const sku = element.querySelector(".variant-sku");
+        if (variant) {
+          if (variant.sku) {
+            if(sku) {
+              sku.innerHTML = variant.sku;
+            }
+            element.style.display = "block"
+          } else {
+            element.style.display = "none";
+          }
+        } else {
+          element.style.display = "none";
+        }
+      });
+    }  
+  });
+</script>
+<!-- end SKU --> 
+```
+
+Add this code to the Liquid section block on the product page
+
+![image](https://user-images.githubusercontent.com/1010232/144634266-5e250919-68f8-4987-8f49-b69557e09f4b.png)
+
+
+#### Example when this is used
+![image](https://user-images.githubusercontent.com/1010232/144634357-43abd557-cbd0-4b7f-8144-b15f0472b991.png)
+
