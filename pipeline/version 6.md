@@ -25,6 +25,7 @@ To add any <b>CSS</b> code in this list follow these steps:
 May require <b>Liquid</b>, <b>CSS</b> and <b>Javascript</b> changes
 1. [Show cart drawer when product added to cart - for pipeline 6.1 and above](#21)
 2. [Add SKU to product section with the Liquid block](#22)
+3. [Show native quantity selection for quantity input](#23)
 
 ### 1. Solid Color for Add to cart button <a name="1"></a>
 
@@ -485,4 +486,32 @@ Add the code below to the Liquid section block on the product page
 
 #### Example when this is used
 ![image](https://user-images.githubusercontent.com/1010232/144634357-43abd557-cbd0-4b7f-8144-b15f0472b991.png)
+
+
+### 3. Show native quantity selector for quantity input <a name="23"></a>
+
+This allows the quantity selector to use the min/max/step attributes.
+
+```css
+/* CSS - Show native quantity selection for quantity input*/
+.quantity__button{
+  display: none;
+}
+.quantity__input{ 
+  text-align: left;
+  padding: 8px 10px;
+}
+input[type=number],
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1 !important;
+  -webkit-appearance: auto !important;
+  -moz-appearance auto !important;
+}
+/* end */
+```
+
+#### Example when this is used
+![image](https://user-images.githubusercontent.com/1010232/144886979-cc352c4c-8da4-46c7-95f2-239e9f322d2a.png)
+
 
