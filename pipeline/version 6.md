@@ -25,7 +25,7 @@ To add any <b>CSS</b> code in this list follow these steps:
 May require <b>Liquid</b>, <b>CSS</b> and <b>Javascript</b> changes
 1. [Show cart drawer when product added to cart - for pipeline 6.1 and above](#21)
 2. [Add SKU to product section with the Liquid block](#22)
-3. [Show native quantity selection for quantity input](#23)
+3. [Show native quantity selector for quantity input](#23)
 
 ### 1. Solid Color for Add to cart button <a name="1"></a>
 
