@@ -19,6 +19,7 @@ To add any <b>CSS</b> code in this list follow these steps:
 10. [Change background-color and roundness of variant radio labels](#10)
 11. [Show dots for mobile product page thumbnails](#11)
 12. [Borderless product page image on mobile](#12)
+13. [Always show grid swatches](#13)
 
 
 ## Advanced Changes
@@ -373,7 +374,6 @@ Add this to make the labels round
 ![image](https://user-images.githubusercontent.com/1010232/142922046-352e2699-c5a2-4207-9ced-8abd71252be2.png)
 
 
-
 ### 12. Borderless product page image on mobile <a name="12"></a>
 
 ```css
@@ -408,6 +408,33 @@ Add this to make the labels round
 #### Example when this is used
 
 ![image](https://user-images.githubusercontent.com/1010232/144066487-ddc1605f-f12b-4065-8bec-30605b2ddade.png)
+
+
+### 13. Always show grid swatches <a name="13"></a>
+
+Hide the colors available text and show the swatches.
+
+![image](https://user-images.githubusercontent.com/1010232/145248439-98f894ee-f16a-4669-aeb5-614987d011b8.png)
+
+
+```css
+/* CSS - Always show grid swatches */
+.product-grid-item .grid__swatch__container .grid__swatch__placeholder {
+    display: none;
+}
+.product-grid-item .grid__swatch__container .grid__swatch__hover {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+/* end */
+```
+
+#### Example when this is used
+![image](https://user-images.githubusercontent.com/1010232/145248164-f1baea1f-7222-49eb-9db6-5ed8eb2b115b.png)
+
+
+
 
 ## Advanced Changes
 
