@@ -20,6 +20,7 @@ To add any <b>CSS</b> code in this list follow these steps:
 11. [Show dots for mobile product page thumbnails](#11)
 12. [Borderless product page image on mobile](#12)
 13. [Always show grid swatches](#13)
+14. [Show footer logo within footer section](#14)
 
 
 ## Advanced Changes
@@ -434,6 +435,23 @@ Hide the colors available text and show the swatches.
 ![image](https://user-images.githubusercontent.com/1010232/145248164-f1baea1f-7222-49eb-9db6-5ed8eb2b115b.png)
 
 
+### 14. Show footer logo within footer section <a name="14"></a>
+
+```css
+/* CSS - Show footer logo within footer section */
+.footer-logo-wrapper{
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.site-footer {
+    padding-top: 0px;
+}
+/* end */
+```
+
+#### Example when this is used
+![image](https://user-images.githubusercontent.com/1010232/146030338-362c84db-f9e5-41c1-9e28-1b4b030dbce4.png)
 
 
 ## Advanced Changes
