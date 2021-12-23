@@ -28,6 +28,7 @@ May require <b>Liquid</b>, <b>CSS</b> and <b>Javascript</b> changes
 1. [Show cart drawer when product added to cart - for pipeline 6.1 and above](#21)
 2. [Add SKU to product section with the Liquid block](#22)
 3. [Show native quantity selector for quantity input](#23)
+4. [Show payment types below add to cart button](#24)
 
 ### 1. Solid Color for Add to cart button <a name="1"></a>
 
@@ -559,4 +560,34 @@ input[type=number]::-webkit-outer-spin-button {
 #### Example when this is used
 ![image](https://user-images.githubusercontent.com/1010232/144886979-cc352c4c-8da4-46c7-95f2-239e9f322d2a.png)
 
+
+### 4. Show payment types below add to cart button <a name="24"></a>
+
+Add the code below to the **Liquid** section block on the product page.
+
+![image](https://user-images.githubusercontent.com/1010232/147277810-58630c9c-1e2a-4d6b-a0ae-5e5bc0c587cc.png)
+
+
+```liquid
+<!-- Liquid - Add payment types --> 
+{% unless shop.enabled_payment_types == empty %}
+<ul class="footer-payment payment-icons inline-list">
+  {% for type in shop.enabled_payment_types %}
+  <li>
+    {{ type | payment_type_svg_tag: class: 'payment-icon' }}
+    <span class="visually-hidden">{{ type | capitalize | replace: '_', ' ' }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endunless %}
+<!-- end payment types --> 
+```
+
+Place the **Liquid** block below the **Form** block.
+
+![image](https://user-images.githubusercontent.com/1010232/147277912-30a26d4b-6988-4271-81c1-e11263954e8b.png)
+
+
+#### Example when this is used
+![image](https://user-images.githubusercontent.com/1010232/147277865-fc54676a-f38c-4c4f-8f48-7c1ef6ba6d4f.png)
 
