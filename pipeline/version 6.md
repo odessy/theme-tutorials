@@ -269,11 +269,12 @@ This will force text to use normal letter case.
 
 ```css
 /* CSS - Use initial text transform for all text */
+.announcement__more, .announcement__text, .announcement__text p, .rte.icon__bar__paragraph p,
 .footer-quicklinks, .footer-secondary, .breadcrumb, .navtext, .uppercase, .home--uppercase, .home__subtitle,
 .grid__title, .icon__column__heading, .product__grid__title, .standard__kicker, .product__info__link--inline, 
 .radio__legend__label, .shopify-payment-button .shopify-payment-button__button--unbranded,
 .accordion__title, .collection__filters__toggle, .popout--navbar .popout__toggle,
-.product__badge, .subcollection__title{
+.product__badge, .subcollection__title, .sidebar__item a, .sidebar__item span{
   text-transform: initial !important;
 }
 :root{
