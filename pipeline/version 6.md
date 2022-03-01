@@ -275,7 +275,7 @@ This will force text to use normal letter case.
 .radio__legend__label, .shopify-payment-button .shopify-payment-button__button--unbranded,
 .accordion__title, .collection__filters__toggle, .popout--navbar .popout__toggle, .share__text,
 .product__badge, .subcollection__title, .sidebar__item a, .sidebar__item span, .popout-list__option,
-.tabs--pill>.tab-link, .hero__kicker, .play__button--text{
+.tabs--pill>.tab-link, .hero__kicker, .play__button--text, .caps--link{
   text-transform: initial !important;
 }
 :root{
