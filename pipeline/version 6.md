@@ -416,20 +416,22 @@ Add this to make the labels round
 
 ### 13. Always show grid swatches <a name="13"></a>
 
-Hide the colors available text and show the swatches.
+Hide the colors available text and show the swatches on desktop.
 
 ![image](https://user-images.githubusercontent.com/1010232/145248439-98f894ee-f16a-4669-aeb5-614987d011b8.png)
 
 
 ```css
-/* CSS - Always show grid swatches */
-.product-grid-item .grid__swatch__container .grid__swatch__placeholder {
-    display: none;
-}
-.product-grid-item .grid__swatch__container .grid__swatch__hover {
-    visibility: visible;
-    opacity: 1;
-    height: auto;
+/* CSS - Always show grid swatches on desktop */
+@media only screen and (min-width: 480px){
+    .product-grid-item .grid__swatch__container .grid__swatch__placeholder {
+        display: none;
+    }
+    .product-grid-item .grid__swatch__container .grid__swatch__hover {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+    }
 }
 /* end */
 ```
