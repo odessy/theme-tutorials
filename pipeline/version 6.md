@@ -36,11 +36,13 @@ This allows the add to cart button to use the primary accent color
 
 ```css
 /* CSS - change Add to Cart button color */
+.upsell__btn,
 .product__submit__buttons .btn--add-to-cart {
   background-color: var(---color-primary);
   border: 1px solid var(---color-primary);
   color: var(---color-primary-opposite);
 }
+.upsell__btn:hover, .upsell__btn:focus,
 .product__submit__buttons .btn--add-to-cart:hover, .product__submit__buttons .btn--add-to-cart:focus {
   background-color: var(---color-primary-hover);
   border: 1px solid var(---color-primary-hover);
