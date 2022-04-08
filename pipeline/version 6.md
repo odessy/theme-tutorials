@@ -22,6 +22,7 @@ To add any <b>CSS</b> code in this list follow these steps:
 13. [Always show grid swatches](#13)
 14. [Show footer logo within footer section](#14)
 15. [Increase max width for theme wrapper](#15)
+16. [Products: Large vertical image display with sticky column](#16)
 
 ## Advanced Changes
 May require <b>Liquid</b>, <b>CSS</b> and <b>Javascript</b> changes
@@ -29,7 +30,7 @@ May require <b>Liquid</b>, <b>CSS</b> and <b>Javascript</b> changes
 2. [Add SKU to product section with the Liquid block](#22)
 3. [Show native quantity selector for quantity input](#23)
 4. [Show payment types below add to cart button](#24)
-5. [Products: Large vertical image display with sticky column](#25)
+
 
 ### 1. Solid Color for Add to cart button <a name="1"></a>
 
@@ -479,6 +480,53 @@ The theme wrapper limits the max-width of the section to 1080px. This CSS change
 /* end */
 ```
 
+### 16. Products: Large vertical image display with sticky column <a name="16"></a>
+
+With this modification, you can display all your product images in full size down the main product image column.
+
+```css
+/* CSS - Products: Large vertical image display with sticky column */
+@media only screen and (min-width: 768px){
+  .product__media__wrapper .flickity-viewport {
+    height: auto !important;
+  }
+  .product__media__wrapper .flickity-viewport,
+  .product__media__wrapper .flickity-slider,
+  .product__media__wrapper .product__media {
+    position: relative !important;
+    transform: none !important;
+    left: 0 !important;
+  }
+  .product__media__wrapper .flickity-slider .product__media {
+      margin: 0;
+      width: 100%;
+      height: auto;
+  }
+  .product__slides .flickity-slider>*{
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .product__media__wrapper .flickity-slider .product__media:not(:first-of-type) {margin-top: var(--gutter);}  
+  /* end */
+
+  /* --- code to make product info column sticky --- */
+  .product-single > .grid__item:not(.product__media__wrapper) {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 5001;
+  }
+  /* - end - */
+}
+```
+
+
+#### Example with sticky right column:
+
+![image](https://user-images.githubusercontent.com/1010232/162497630-a5a72cf0-8555-4049-ab70-a5340fa451fb.png)
+
+
+
 ## Advanced Changes
 
 ### 1. Show cart drawer when product added to cart <a name="21"></a>
@@ -614,52 +662,5 @@ Place the **Liquid** block below the **Form** block.
 
 #### Example when this is used
 ![image](https://user-images.githubusercontent.com/1010232/147277865-fc54676a-f38c-4c4f-8f48-7c1ef6ba6d4f.png)
-
-
-### 5. Products: Large vertical image display with sticky column <a name="25"></a>
-
-With this modification, you can display all your product images in full size down the main product image column.
-
-```css
-/* CSS - Products: Large vertical image display with sticky column */
-@media only screen and (min-width: 768px){
-  .product__media__wrapper .flickity-viewport {
-    height: auto !important;
-  }
-  .product__media__wrapper .flickity-viewport,
-  .product__media__wrapper .flickity-slider,
-  .product__media__wrapper .product__media {
-    position: relative !important;
-    transform: none !important;
-    left: 0 !important;
-  }
-  .product__media__wrapper .flickity-slider .product__media {
-      margin: 0;
-      width: 100%;
-      height: auto;
-  }
-  .product__slides .flickity-slider>*{
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-  .product__media__wrapper .flickity-slider .product__media:not(:first-of-type) {margin-top: var(--gutter);}  
-  /* end */
-
-  /* --- code to make product info column sticky --- */
-  .product-single > .grid__item:not(.product__media__wrapper) {
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0;
-    z-index: 5001;
-  }
-  /* - end - */
-}
-```
-
-
-#### Example with sticky right column:
-
-![image](https://user-images.githubusercontent.com/1010232/162497630-a5a72cf0-8555-4049-ab70-a5340fa451fb.png)
-
 
 
