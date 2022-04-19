@@ -575,10 +575,15 @@ Add the code below to the Liquid section block on the product page
 
 <script>
   document.addEventListener('theme:variant:change', function(event) {
-    var variant = event.detail.variant;
-    var container = event.target;
+    const variant = event.detail.variant;
+    let container = event.target;
+    
+    if(event.target.outerWrapper){
+      container = event.target.outerWrapper;
+    }
+    
     const skuWrapper = container.querySelectorAll(".sku-wrapper");
-	
+    
     if (skuWrapper.length) {
       skuWrapper.forEach((element) => {
         const sku = element.querySelector(".variant-sku");
