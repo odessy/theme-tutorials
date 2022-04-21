@@ -283,7 +283,7 @@ This will force text to use normal letter case.
   text-transform: initial !important;
 }
 :root{
-    ---font-heading-caps: initial
+    ---font-heading-caps: initial;
 }
 /* end */
 ```
