@@ -30,6 +30,7 @@ May require <b>Liquid</b>, <b>CSS</b> and <b>Javascript</b> changes
 2. [Add SKU to product section with the Liquid block](#22)
 3. [Show native quantity selector for quantity input](#23)
 4. [Show payment types below add to cart button](#24)
+5. [Scroll to top button](#25)
 
 
 ### 1. Solid Color for Add to cart button <a name="1"></a>
@@ -669,3 +670,72 @@ Place the **Liquid** block below the **Form** block.
 ![image](https://user-images.githubusercontent.com/1010232/147277865-fc54676a-f38c-4c4f-8f48-7c1ef6ba6d4f.png)
 
 
+### 5. Scroll to top button <a name="25"></a>
+
+Add this to the theme.css file
+
+```css
+/* CSS - Scroll to top button */
+.btn--scroll-top {
+  position: fixed;
+  right: var(--outer);
+  bottom: var(--outer);
+  z-index: 500;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+.btn--scroll-top:after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: currentcolor;
+  margin: 0;
+  vertical-align: middle;
+  transform: rotate(135deg);
+  transform-origin: 50% 50%;
+  transition: all 0.3s;
+}
+.btn--scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0s;
+}
+/* end */
+```
+
+Add this to the end of your theme.liquid file after this line
+
+```html
+<!-- Paste popup code or third party scripts below this comment line ============== -->
+```
+
+```html
+  <button type="button" class="btn btn--scroll-top btn--neutral" data-scroll-top-button></button>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Scroll to top button
+      const scrollTopButton = document.querySelector('[data-scroll-top-button]');
+      if (scrollTopButton) {
+        scrollTopButton.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          });
+        });
+        document.addEventListener('theme:scroll', () => {
+          scrollTopButton.classList.toggle('is-visible', window.pageYOffset > window.innerHeight);
+        });
+      }
+    });
+  </script>
+```
